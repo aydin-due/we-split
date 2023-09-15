@@ -11,6 +11,7 @@
 		DB6EB35A2AB38F65003AB349 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6EB3592AB38F65003AB349 /* ContentView.swift */; };
 		DB6EB35C2AB38F68003AB349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6EB35B2AB38F68003AB349 /* Assets.xcassets */; };
 		DB6EB3602AB38F68003AB349 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6EB35F2AB38F68003AB349 /* Preview Assets.xcassets */; };
+		DBF664E82AB8B0B200F528D3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF664E72AB8B0B200F528D3 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		DB6EB35B2AB38F68003AB349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6EB35D2AB38F68003AB349 /* we_split.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = we_split.entitlements; sourceTree = "<group>"; };
 		DB6EB35F2AB38F68003AB349 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBF664E72AB8B0B200F528D3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				DB6EB3572AB38F65003AB349 /* we_splitApp.swift */,
 				DB6EB3592AB38F65003AB349 /* ContentView.swift */,
+				DBF664E72AB8B0B200F528D3 /* MainView.swift */,
 				DB6EB35B2AB38F68003AB349 /* Assets.xcassets */,
 				DB6EB35D2AB38F68003AB349 /* we_split.entitlements */,
 				DB6EB35E2AB38F68003AB349 /* Preview Content */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6EB35A2AB38F65003AB349 /* ContentView.swift in Sources */,
+				DBF664E82AB8B0B200F528D3 /* MainView.swift in Sources */,
 				DB6EB3582AB38F65003AB349 /* we_splitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
