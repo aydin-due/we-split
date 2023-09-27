@@ -13,20 +13,25 @@ struct ContentView: View {
     @State var tip = 20
     @FocusState var isCheckFocused: Bool
     
+    let currency = Locale.current.currency?.identifier ?? "USD"
+    
     let tips = [0, 10, 15, 20, 25]
     
-    var splittedTotal: Double {
-        let people = Double(people+2)
-        let tip = check / 100 * Double(tip)
-        let total = tip + check
-        return total/people
-    }
-    
+    var total: Double {
+       let tip = check / 100 * Double(tip)
+       return tip + check
+   }
+   
+   var splittedTotal: Double {
+       let people = Double(people+2)
+       return total/people
+   }
+
     var body: some View {
         return NavigationView {
             Form {
                 Section {
-                    TextField("Amount", value: $check, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    TextField("Amount", value: $check, format: .currency(code: currency))
                         .keyboardType(.decimalPad)
                         .focused($isCheckFocused)
                     Picker("Number of people", selection: $people) {
@@ -48,8 +53,18 @@ struct ContentView: View {
                     Text("how much tip do you want to leave?")
                 }
                 Section {
-                    Text(splittedTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
-                }
+                   Text(splittedTotal, format: .currency(code: currency))
+               }
+               header: {
+                   Text("Amount per person")
+               }
+               Section {
+                   Text(total, format: .currency(code: currency))
+                       .foregroundColor(tip == 0 ? .red : .black)
+               }
+               header: {
+                   Text("Total amount")
+               }
             }
             .navigationTitle("WeSplit")
             .toolbar {
